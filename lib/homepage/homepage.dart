@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:luxury_app/agenda/agenda_home.dart';
 import 'package:luxury_app/hotel_page/hotel_page.dart';
 import 'package:luxury_app/personal_assistant/personal_assistant_page.dart';
 import 'package:luxury_app/transfer/transfer_page.dart';
@@ -156,29 +157,35 @@ class _HomepageState extends State<Homepage> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                  child: Container(
-                    height: 120,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            opacity: 0.3,
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/agenda_image.png')),
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Agenda',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AgendaHome()));
+                    },
+                    child: Container(
+                      height: 120,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              opacity: 0.3,
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/agenda_image.png')),
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Agenda',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

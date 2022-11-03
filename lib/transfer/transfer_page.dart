@@ -22,8 +22,79 @@ class _TransferPageState extends State<TransferPage> {
         title: Text('Back'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.shade600,
+                    spreadRadius: 1,
+                    blurRadius: 15,
+                    offset: const Offset(0, 15))
+              ], color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'At aiport: ',
+                          style: TextStyle(
+                              fontSize: 18, color: Colors.grey.shade600),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Divider(
+                    thickness: 1,
+                    indent: 150,
+                    endIndent: 150,
+                    color: Colors.black,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(
+                                width: 50,
+                                image: AssetImage('assets/emerald_image.png'),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'EMERALD',
+                              style: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'GROUP A',
+                              style: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
@@ -134,83 +205,83 @@ class _TransferPageState extends State<TransferPage> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.grey.shade600,
-                                  spreadRadius: 1,
-                                  blurRadius: 15,
-                                  offset: const Offset(0, 15))
-                            ],
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'At aiport follow: ',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        color: Colors.grey.shade600),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const Divider(
-                              thickness: 2,
-                              indent: 150,
-                              endIndent: 150,
-                              color: Colors.black,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Image(
-                                          width: 50,
-                                          image: AssetImage(
-                                              'assets/emerald_image.png'),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'EMERALD',
-                                        style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Text(
-                                        'GROUP A',
-                                        style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     Container(
+                  //       decoration: BoxDecoration(
+                  //           boxShadow: [
+                  //             BoxShadow(
+                  //                 color: Colors.grey.shade600,
+                  //                 spreadRadius: 1,
+                  //                 blurRadius: 15,
+                  //                 offset: const Offset(0, 15))
+                  //           ],
+                  //           color: Colors.white,
+                  //           borderRadius: BorderRadius.circular(10)),
+                  //       child: Column(
+                  //         children: [
+                  //           Row(
+                  //             mainAxisAlignment: MainAxisAlignment.center,
+                  //             children: [
+                  //               Padding(
+                  //                 padding: const EdgeInsets.all(8.0),
+                  //                 child: Text(
+                  //                   'At aiport follow: ',
+                  //                   style: TextStyle(
+                  //                       fontSize: 18,
+                  //                       color: Colors.grey.shade600),
+                  //                 ),
+                  //               ),
+                  //             ],
+                  //           ),
+                  //           const Divider(
+                  //             thickness: 2,
+                  //             indent: 150,
+                  //             endIndent: 150,
+                  //             color: Colors.black,
+                  //           ),
+                  //           Padding(
+                  //             padding: const EdgeInsets.all(8.0),
+                  //             child: Row(
+                  //               mainAxisAlignment: MainAxisAlignment.center,
+                  //               children: [
+                  //                 Column(
+                  //                   children: [
+                  //                     Padding(
+                  //                       padding: const EdgeInsets.all(8.0),
+                  //                       child: Image(
+                  //                         width: 50,
+                  //                         image: AssetImage(
+                  //                             'assets/emerald_image.png'),
+                  //                       ),
+                  //                     ),
+                  //                   ],
+                  //                 ),
+                  //                 Column(
+                  //                   children: [
+                  //                     Text(
+                  //                       'EMERALD',
+                  //                       style: TextStyle(
+                  //                           fontSize: 25,
+                  //                           fontWeight: FontWeight.bold),
+                  //                     ),
+                  //                     Text(
+                  //                       'GROUP A',
+                  //                       style: TextStyle(
+                  //                           fontSize: 25,
+                  //                           fontWeight: FontWeight.bold),
+                  //                     ),
+                  //                   ],
+                  //                 ),
+                  //               ],
+                  //             ),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                   const SizedBox(
                     height: 20,
                   )

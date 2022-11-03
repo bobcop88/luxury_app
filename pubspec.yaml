@@ -40,7 +40,8 @@ dependencies:
   url_launcher: ^6.1.6
   flutter_map: ^2.2.0
   latlong2: ^0.8.1
-  flutter_osm_plugin: ^0.40.3
+  timelines: ^0.1.0
+  # flutter_osm_plugin: ^0.40.3
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
     - assets/trip/
     - assets/hotel_slider/
     - assets/restaurants/
+    - assets/shops/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

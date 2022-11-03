@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -205,41 +204,41 @@ class _RestaurantPageState extends State<RestaurantPage> {
                         const SizedBox(
                           height: 15,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: 350,
-                              height: 350,
-                              child: FlutterMap(
-                                options: new MapOptions(
-                                  center: new LatLng(
-                                      40.45040900734417, -3.677942628820985),
-                                  zoom: 17,
-                                ),
-                                layers: [
-                                  new TileLayerOptions(
-                                    urlTemplate:
-                                        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                                  ),
-                                  new MarkerLayerOptions(
-                                    markers: [
-                                      new Marker(
-                                        width: 80.0,
-                                        height: 80.0,
-                                        point: new LatLng(40.45040900734417,
-                                            -3.677942628820985),
-                                        builder: (ctx) => new Container(
-                                          child: Icon(Icons.location_on),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.center,
+                        //   children: [
+                        //     SizedBox(
+                        //       width: 350,
+                        //       height: 350,
+                        //       child: FlutterMap(
+                        //         options: new MapOptions(
+                        //           center: new LatLng(
+                        //               40.45040900734417, -3.677942628820985),
+                        //           zoom: 17,
+                        //         ),
+                        //         layers: [
+                        //           new TileLayerOptions(
+                        //             urlTemplate:
+                        //                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                        //           ),
+                        //           new MarkerLayerOptions(
+                        //             markers: [
+                        //               new Marker(
+                        //                 width: 80.0,
+                        //                 height: 80.0,
+                        //                 point: new LatLng(40.45040900734417,
+                        //                     -3.677942628820985),
+                        //                 builder: (ctx) => new Container(
+                        //                   child: Icon(Icons.location_on),
+                        //                 ),
+                        //               ),
+                        //             ],
+                        //           ),
+                        //         ],
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
                       ],
                     ),
                   ),
