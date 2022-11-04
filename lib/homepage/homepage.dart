@@ -3,6 +3,7 @@ import 'package:luxury_app/agenda/agenda_home.dart';
 import 'package:luxury_app/hotel_page/hotel_page.dart';
 import 'package:luxury_app/personal_assistant/personal_assistant_page.dart';
 import 'package:luxury_app/transfer/transfer_page.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -35,8 +36,11 @@ class _HomepageState extends State<Homepage> {
                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => TransferPage()));
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.fade,
+                                child: TransferPage()));
                       },
                       child: Container(
                         height: 120,
@@ -72,8 +76,11 @@ class _HomepageState extends State<Homepage> {
                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HotelPage()));
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.fade,
+                                child: HotelPage()));
                       },
                       child: Container(
                         height: 120,
@@ -117,8 +124,11 @@ class _HomepageState extends State<Homepage> {
                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PersonalAssistantPage()));
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.fade,
+                                child: PersonalAssistantPage()));
                       },
                       child: Container(
                         height: 120,
@@ -161,8 +171,11 @@ class _HomepageState extends State<Homepage> {
                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => AgendaHome()));
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.fade,
+                                child: AgendaHome()));
                       },
                       child: Container(
                         height: 120,
