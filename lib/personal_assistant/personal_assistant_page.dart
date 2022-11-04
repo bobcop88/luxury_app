@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:luxury_app/personal_assistant/list_restaurants.dart';
+import 'package:luxury_app/personal_assistant/restaurants/list_restaurants.dart';
+import 'package:luxury_app/personal_assistant/restaurants/top_choices.dart';
+import 'package:luxury_app/personal_assistant/shops/list_shops.dart';
 
 class PersonalAssistantPage extends StatefulWidget {
   const PersonalAssistantPage({Key? key}) : super(key: key);
@@ -12,6 +14,8 @@ class PersonalAssistantPage extends StatefulWidget {
 
 class _PersonalAssistantPageState extends State<PersonalAssistantPage> {
   bool restaurantVisible = false;
+  int selectedPage = 0;
+  final PageController assistantController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +41,8 @@ class _PersonalAssistantPageState extends State<PersonalAssistantPage> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        restaurantVisible = !restaurantVisible;
+                        selectedPage = 1;
+                        assistantController.jumpToPage(1);
                       });
                     },
                     child: Container(
@@ -45,7 +50,7 @@ class _PersonalAssistantPageState extends State<PersonalAssistantPage> {
                       width: 200,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              opacity: 0.3,
+                              opacity: selectedPage == 1 ? 0.5 : 0.3,
                               fit: BoxFit.cover,
                               image: AssetImage('assets/restaurant_image.png')),
                           border: Border.all(color: Colors.white),
@@ -71,90 +76,112 @@ class _PersonalAssistantPageState extends State<PersonalAssistantPage> {
                   const SizedBox(
                     width: 10,
                   ),
-                  Container(
-                    height: 100,
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            opacity: 0.3,
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/shops_image.png')),
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Shops',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedPage = 2;
+                        assistantController.jumpToPage(2);
+                      });
+                    },
+                    child: Container(
+                      height: 100,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              opacity: selectedPage == 2 ? 0.5 : 0.3,
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/shops_image.png')),
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Shops',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   const SizedBox(
                     width: 10,
                   ),
-                  Container(
-                    height: 100,
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            opacity: 0.3,
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/bar_image.png')),
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Fashion Bars',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedPage = 3;
+                      });
+                    },
+                    child: Container(
+                      height: 100,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              opacity: selectedPage == 3 ? 0.5 : 0.3,
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/bar_image.png')),
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Fashion Bars',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   const SizedBox(
                     width: 10,
                   ),
-                  Container(
-                    height: 100,
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            opacity: 0.3,
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/events_image.png')),
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Events',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedPage = 4;
+                      });
+                    },
+                    child: Container(
+                      height: 100,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              opacity: selectedPage == 4 ? 0.5 : 0.3,
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/events_image.png')),
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Events',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -168,246 +195,26 @@ class _PersonalAssistantPageState extends State<PersonalAssistantPage> {
           const SizedBox(
             height: 15,
           ),
-          Visibility(
-            visible: restaurantVisible,
-            child: Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: RestaurantList(),
-              ),
-            ),
-          ),
-          Visibility(
-            visible: !restaurantVisible,
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 50,
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: PageView(
+                    controller: assistantController,
+                    children: [
+                      Container(
+                        child: TopChoicesPage(),
+                      ),
+                      Container(
+                        child: RestaurantList(),
+                      ),
+                      Container(
+                        child: ShopList(),
+                      ),
+                    ],
                   ),
-                  Text(
-                    'Top Choices',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 300,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Stack(children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            topRight: Radius.circular(10)),
-                                        child: Image(
-                                          image: AssetImage(
-                                              'assets/restaurants/gaytan.webp'),
-                                          height: 150,
-                                          width: 300,
-                                          fit: BoxFit.cover,
-                                          alignment: Alignment.center,
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(10)),
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.all(4.0),
-                                              child: Text(
-                                                'Restaurant',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 12),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Column(
-                                    children: [
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      Image(
-                                          height: 20,
-                                          image: AssetImage(
-                                              'assets/restaurants/michelin_star.png')),
-                                      const SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(
-                                        'Gaytan',
-                                        style: TextStyle(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'Modern Cousine',
-                                        style: TextStyle(
-                                          color: Color.fromRGBO(0, 101, 47, 1),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'Príncipe de Vergara 205, Madrid, 28002',
-                                        style: TextStyle(
-                                            fontSize: 12, color: Colors.black),
-                                      ),
-                                      const SizedBox(
-                                        height: 25,
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        Container(
-                          width: 300,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Stack(children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            topRight: Radius.circular(10)),
-                                        child: Image(
-                                          image: AssetImage(
-                                              'assets/shops/vuitton.jpeg'),
-                                          height: 150,
-                                          width: 300,
-                                          fit: BoxFit.cover,
-                                          alignment: Alignment.center,
-                                        ),
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(10)),
-                                            child: Padding(
-                                              padding:
-                                                  const EdgeInsets.all(4.0),
-                                              child: Text(
-                                                'Shopping',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 12),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ]),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Column(
-                                    children: [
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      Icon(
-                                        FontAwesome5.star_of_life,
-                                        color: Colors.yellow.shade700,
-                                      ),
-                                      const SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(
-                                        'Louis Vuitton',
-                                        style: TextStyle(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'The most luxurious shopping',
-                                        style: TextStyle(
-                                          color: Color.fromRGBO(0, 101, 47, 1),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        'C. de Serrano, 66, 28001 Madrid',
-                                        style: TextStyle(
-                                            fontSize: 12, color: Colors.black),
-                                      ),
-                                      const SizedBox(
-                                        height: 25,
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],

@@ -1,6 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:luxury_app/agenda/day_one.dart';
+import 'package:luxury_app/agenda/day_three.dart';
+import 'package:luxury_app/agenda/day_two.dart';
 import 'package:timelines/timelines.dart';
 
 class AgendaHome extends StatefulWidget {
@@ -11,6 +14,8 @@ class AgendaHome extends StatefulWidget {
 }
 
 class _AgendaHomeState extends State<AgendaHome> {
+  final PageController pageController = PageController();
+  int selectedPage = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +30,7 @@ class _AgendaHomeState extends State<AgendaHome> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Event Day',
+                'Agenda',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -39,87 +44,111 @@ class _AgendaHomeState extends State<AgendaHome> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                  child: Column(
-                    children: [
-                      Text(
-                        'FEB',
-                        style: TextStyle(fontSize: 9),
-                      ),
-                      Text(
-                        '2',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'FRI',
-                        style: TextStyle(fontSize: 9),
-                      ),
-                    ],
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    pageController.jumpToPage(0);
+                    selectedPage = 0;
+                  });
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: selectedPage == 0 ? Colors.green : Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                    child: Column(
+                      children: [
+                        Text(
+                          'FEB',
+                          style: TextStyle(fontSize: 9),
+                        ),
+                        Text(
+                          '2',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'FRI',
+                          style: TextStyle(fontSize: 9),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 width: 15,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                  child: Column(
-                    children: [
-                      Text(
-                        'FEB',
-                        style: TextStyle(fontSize: 9),
-                      ),
-                      Text(
-                        '3',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'SAT',
-                        style: TextStyle(fontSize: 9),
-                      ),
-                    ],
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    pageController.jumpToPage(1);
+                    selectedPage = 1;
+                  });
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: selectedPage == 1 ? Colors.green : Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                    child: Column(
+                      children: [
+                        Text(
+                          'FEB',
+                          style: TextStyle(fontSize: 9),
+                        ),
+                        Text(
+                          '3',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'SAT',
+                          style: TextStyle(fontSize: 9),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 width: 15,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                  child: Column(
-                    children: [
-                      Text(
-                        'FEB',
-                        style: TextStyle(fontSize: 9),
-                      ),
-                      Text(
-                        '4',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'SUN',
-                        style: TextStyle(fontSize: 9),
-                      ),
-                    ],
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    pageController.jumpToPage(2);
+                    selectedPage = 2;
+                  });
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: selectedPage == 2 ? Colors.green : Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                    child: Column(
+                      children: [
+                        Text(
+                          'FEB',
+                          style: TextStyle(fontSize: 9),
+                        ),
+                        Text(
+                          '4',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'SUN',
+                          style: TextStyle(fontSize: 9),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -128,40 +157,30 @@ class _AgendaHomeState extends State<AgendaHome> {
           const SizedBox(
             height: 25,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Flexible(
-                child: Timeline(
-                  children: [
-                    TimelineTile(
-                      oppositeContents: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'opposite',
-                        ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: PageView(
+                    controller: pageController,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(color: Colors.white),
+                        child: DayOne(),
                       ),
-                      contents: Card(
-                        child: Container(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('contents'),
-                        ),
+                      Container(
+                        decoration: BoxDecoration(color: Colors.blue),
+                        child: DayTwo(),
                       ),
-                      node: TimelineNode(
-                        indicator: DotIndicator(),
-                        startConnector: SolidLineConnector(),
-                        endConnector: SolidLineConnector(),
+                      Container(
+                        decoration: BoxDecoration(color: Colors.red.shade200),
+                        child: DayThree(),
                       ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(
-                  child: Text(
-                'adtsfsd',
-                style: TextStyle(color: Colors.white),
-              ))
-            ],
+              ],
+            ),
           ),
         ],
       ),
