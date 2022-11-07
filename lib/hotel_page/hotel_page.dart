@@ -1,6 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:luxury_app/widgets/bottomNav.dart';
+import 'package:page_transition/page_transition.dart';
+
+import '../homepage/homepage.dart';
 
 class HotelPage extends StatefulWidget {
   const HotelPage({Key? key}) : super(key: key);
@@ -17,32 +21,46 @@ class _HotelPageState extends State<HotelPage> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          iconSize: 35,
-          icon: Icon(Icons.keyboard_arrow_left),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text('Back'),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(10)),
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 10,
+    return Container(
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xff5bb85f), Color(0xff464646)],
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+          ),
+          image: DecorationImage(
+              fit: BoxFit.cover,
+              opacity: 0.2,
+              image: AssetImage('assets/hotel_slider/madrid.png'))),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
                     ),
-                    Row(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: const Homepage()));
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                  child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Column(
@@ -79,132 +97,117 @@ class _HotelPageState extends State<HotelPage> {
                             Text(
                               'Hotel Ritz Madrid',
                               style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                             Text(
                               ' Pl. de la Lealtad, 5, 28014 Madrid',
                               style: TextStyle(
-                                  color: Colors.grey.shade500, fontSize: 14),
+                                  color: Colors.grey.shade400, fontSize: 14),
                             ),
                           ],
                         ),
-                      ],
+                      ])),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: CarouselSlider(
+                          items: imageHotel,
+                          options: CarouselOptions(
+                            height: 200,
+                            viewportFraction: 0.8,
+                            initialPage: 0,
+                            enableInfiniteScroll: true,
+                            reverse: false,
+                            autoPlay: true,
+                            autoPlayInterval: Duration(seconds: 3),
+                            autoPlayAnimationDuration:
+                                Duration(milliseconds: 800),
+                            autoPlayCurve: Curves.fastOutSlowIn,
+                            enlargeCenterPage: true,
+                            scrollDirection: Axis.horizontal,
+                          )),
                     ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: CarouselSlider(
-                              items: imageHotel,
-                              options: CarouselOptions(
-                                height: 200,
-                                viewportFraction: 0.8,
-                                initialPage: 0,
-                                enableInfiniteScroll: true,
-                                reverse: false,
-                                autoPlay: true,
-                                autoPlayInterval: Duration(seconds: 3),
-                                autoPlayAnimationDuration:
-                                    Duration(milliseconds: 800),
-                                autoPlayCurve: Curves.fastOutSlowIn,
-                                enlargeCenterPage: true,
-                                scrollDirection: Axis.horizontal,
-                              )),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Room',
+                          style: TextStyle(color: Colors.white),
                         ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          '202',
+                          style: TextStyle(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Room Number',
-                                  style: TextStyle(
-                                      color: Colors.grey.shade500,
-                                      fontSize: 16),
-                                ),
-                                Text(
-                                  '206',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(
-                          width: 15,
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Accomodation',
+                          style: TextStyle(color: Colors.white),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Suite Plus',
+                          style: TextStyle(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Accomodation',
-                                  style: TextStyle(
-                                      color: Colors.grey.shade500,
-                                      fontSize: 16),
-                                ),
-                                Text(
-                                  'Suite Plus',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Text('Online Check In'),
-                        ),
-                      ],
-                    ),
-                    const Spacer(),
-                    const Divider(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                  Color.fromRGBO(0, 101, 47, 1))),
-                          onPressed: () {},
-                          child: Text('Send Request'),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
                   ],
                 ),
               ),
-            ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Online Check In'),
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromRGBO(0, 101, 47, 1))),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
+        bottomNavigationBar: const BottomNavBar(),
       ),
     );
   }

@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    videoController = VideoPlayerController.asset('assets/EMERALD_new.mp4')
+    videoController = VideoPlayerController.asset('assets/EMERALD_1.mp4')
       ..initialize().then((value) => videoController.play());
     Timer(
       const Duration(seconds: 8),

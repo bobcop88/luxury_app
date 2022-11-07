@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:luxury_app/homepage/homepage.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:pinput/pinput.dart';
 
 class LoginPage extends StatefulWidget {
@@ -94,8 +95,9 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                         Timer(Duration(seconds: 3), () {
                           Navigator.pushReplacement(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => Homepage()));
+                              PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: Homepage()));
                         });
                       }),
                 ),
