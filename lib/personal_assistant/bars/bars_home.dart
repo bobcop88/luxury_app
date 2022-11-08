@@ -1,16 +1,13 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:luxury_app/personal_assistant/restaurants/restaurant_page.dart';
 
-class RestaurantList extends StatefulWidget {
-  const RestaurantList({Key? key}) : super(key: key);
+class BarsHome extends StatefulWidget {
+  const BarsHome({Key? key}) : super(key: key);
 
   @override
-  State<RestaurantList> createState() => _RestaurantListState();
+  State<BarsHome> createState() => _BarsHomeState();
 }
 
-class _RestaurantListState extends State<RestaurantList> {
+class _BarsHomeState extends State<BarsHome> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -31,8 +28,8 @@ class _RestaurantListState extends State<RestaurantList> {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => RestaurantPage()));
+                                // Navigator.of(context).push(MaterialPageRoute(
+                                //     builder: (context) => RestaurantPage()));
                               },
                               child: Container(
                                 height: 120,
@@ -56,7 +53,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                               child: Image(
                                                   fit: BoxFit.cover,
                                                   image: AssetImage(
-                                                      'assets/restaurants/gaytan.webp')),
+                                                      'assets/bars/bar1.jpeg')),
                                             ),
                                           )
                                         ],
@@ -77,7 +74,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                   Row(
                                                     children: const [
                                                       Text(
-                                                        'Gaytan',
+                                                        'Bad Company 1920',
                                                         style: TextStyle(
                                                             color: Colors.white,
                                                             fontSize: 25,
@@ -85,20 +82,13 @@ class _RestaurantListState extends State<RestaurantList> {
                                                                 FontWeight
                                                                     .bold),
                                                       ),
-                                                      SizedBox(
-                                                        width: 5,
-                                                      ),
-                                                      Image(
-                                                          height: 20,
-                                                          image: AssetImage(
-                                                              'assets/restaurants/michelin_star.png')),
                                                     ],
                                                   ),
                                                   const SizedBox(
                                                     height: 5,
                                                   ),
                                                   Text(
-                                                    'Príncipe de Vergara 205, Madrid, 28002',
+                                                    'C de Miguel Moya 8, 28004 Madrid',
                                                     style: TextStyle(
                                                         fontSize: 12,
                                                         color: Colors.white),
@@ -129,7 +119,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                   padding:
                                                       const EdgeInsets.all(6.0),
                                                   child: Text(
-                                                    'Modern Cousine',
+                                                    'Cocktails',
                                                     style: TextStyle(
                                                         fontSize: 12,
                                                         color: Colors.white),
@@ -170,7 +160,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                             child: Image(
                                                 fit: BoxFit.cover,
                                                 image: AssetImage(
-                                                    'assets/restaurants/diverxo.webp')),
+                                                    'assets/bars/bar2.jpeg')),
                                           ),
                                         )
                                       ],
@@ -191,31 +181,12 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 Row(
                                                   children: [
                                                     Text(
-                                                      'DiverXO',
+                                                      'La Santoria',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 25,
                                                           fontWeight:
                                                               FontWeight.bold),
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    Row(
-                                                      children: const [
-                                                        Image(
-                                                            height: 20,
-                                                            image: AssetImage(
-                                                                'assets/restaurants/michelin_star.png')),
-                                                        Image(
-                                                            height: 20,
-                                                            image: AssetImage(
-                                                                'assets/restaurants/michelin_star.png')),
-                                                        Image(
-                                                            height: 20,
-                                                            image: AssetImage(
-                                                                'assets/restaurants/michelin_star.png')),
-                                                      ],
                                                     ),
                                                   ],
                                                 ),
@@ -223,7 +194,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                   height: 5,
                                                 ),
                                                 Text(
-                                                  'Padre Damián 23, Madrid, 28036',
+                                                  'C. de Lope de Vega, 30, 28014 Madrid',
                                                   style: TextStyle(
                                                       fontSize: 12,
                                                       color: Colors.white),
@@ -254,7 +225,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 padding:
                                                     const EdgeInsets.all(6.0),
                                                 child: Text(
-                                                  'Creative',
+                                                  'Creative Cocktails',
                                                   style: TextStyle(
                                                       fontSize: 12,
                                                       color: Colors.white),
@@ -294,7 +265,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                             child: Image(
                                                 fit: BoxFit.cover,
                                                 image: AssetImage(
-                                                    'assets/restaurants/kabuki.webp')),
+                                                    'assets/bars/bar3.jpeg')),
                                           ),
                                         )
                                       ],
@@ -315,27 +286,20 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 Row(
                                                   children: const [
                                                     Text(
-                                                      'Kabuki',
+                                                      'Salmon Guru',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 25,
                                                           fontWeight:
                                                               FontWeight.bold),
                                                     ),
-                                                    SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    Image(
-                                                        height: 20,
-                                                        image: AssetImage(
-                                                            'assets/restaurants/michelin_star.png')),
                                                   ],
                                                 ),
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
                                                 Text(
-                                                  'Avenida Presidente Carmona 2, Madrid, 28020',
+                                                  'Calle de Echegaray, 21, 28014 Madrid',
                                                   style: TextStyle(
                                                       fontSize: 12,
                                                       color: Colors.white),
@@ -366,7 +330,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 padding:
                                                     const EdgeInsets.all(6.0),
                                                 child: Text(
-                                                  'Japanese',
+                                                  'Funky Cocktails',
                                                   style: TextStyle(
                                                       fontSize: 10,
                                                       color: Colors.white),
@@ -406,7 +370,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                             child: Image(
                                                 fit: BoxFit.cover,
                                                 image: AssetImage(
-                                                    'assets/restaurants/abarra.webp')),
+                                                    'assets/bars/bar4.jpeg')),
                                           ),
                                         )
                                       ],
@@ -427,27 +391,20 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 Row(
                                                   children: const [
                                                     Text(
-                                                      'A\u0027Barra',
+                                                      'Ficus Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 25,
                                                           fontWeight:
                                                               FontWeight.bold),
                                                     ),
-                                                    SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    Image(
-                                                        height: 20,
-                                                        image: AssetImage(
-                                                            'assets/restaurants/michelin_star.png')),
                                                   ],
                                                 ),
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
                                                 Text(
-                                                  'Del Pinar 15, Madrid, 28006',
+                                                  'C. de Santo Tomé, 8, 28004 Madrid',
                                                   style: TextStyle(
                                                       fontSize: 12,
                                                       color: Colors.white),
@@ -478,7 +435,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 padding:
                                                     const EdgeInsets.all(6.0),
                                                 child: Text(
-                                                  'International',
+                                                  'International Cocktails',
                                                   style: TextStyle(
                                                       fontSize: 10,
                                                       color: Colors.white),

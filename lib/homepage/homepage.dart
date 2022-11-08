@@ -341,32 +341,41 @@ class _HomepageState extends State<Homepage> {
                           Expanded(
                             child: Column(
                               children: [
-                                Container(
-                                  width: 200,
-                                  height: 150,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(40),
-                                      color:
-                                          const Color.fromRGBO(51, 201, 159, 1),
-                                      boxShadow: const [
-                                        BoxShadow(
-                                            color: Color.fromARGB(
-                                                255, 37, 148, 116),
-                                            offset: Offset(1, 1),
-                                            blurRadius: 2,
-                                            spreadRadius: 1),
-                                        BoxShadow(
-                                            color: Color.fromARGB(
-                                                255, 59, 233, 184),
-                                            offset: Offset(-1, -1),
-                                            blurRadius: 2,
-                                            spreadRadius: 1),
-                                      ]),
-                                  child: const Padding(
-                                    padding: EdgeInsets.all(20.0),
-                                    child: Image(
-                                      image: AssetImage(
-                                          'assets/calendar_icon.png'),
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        PageTransition(
+                                            type: PageTransitionType.fade,
+                                            child: const AgendaHome()));
+                                  },
+                                  child: Container(
+                                    width: 200,
+                                    height: 150,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(40),
+                                        color: const Color.fromRGBO(
+                                            51, 201, 159, 1),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 37, 148, 116),
+                                              offset: Offset(1, 1),
+                                              blurRadius: 2,
+                                              spreadRadius: 1),
+                                          BoxShadow(
+                                              color: Color.fromARGB(
+                                                  255, 59, 233, 184),
+                                              offset: Offset(-1, -1),
+                                              blurRadius: 2,
+                                              spreadRadius: 1),
+                                        ]),
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(20.0),
+                                      child: Image(
+                                        image: AssetImage(
+                                            'assets/calendar_icon.png'),
+                                      ),
                                     ),
                                   ),
                                 ),

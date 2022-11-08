@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:luxury_app/personal_assistant/bars/bars_home.dart';
 import 'package:luxury_app/personal_assistant/restaurants/list_restaurants.dart';
 import 'package:luxury_app/personal_assistant/restaurants/top_choices.dart';
 import 'package:luxury_app/personal_assistant/shops/list_shops.dart';
@@ -45,23 +46,26 @@ class _PersonalAssistantPageState extends State<PersonalAssistantPage>
         body: SafeArea(
           child: Column(
             children: [
-              Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: const Homepage()));
-                    },
-                  ),
-                ],
+              const SizedBox(
+                height: 15,
               ),
+              // Row(
+              //   children: [
+              //     IconButton(
+              //       icon: const Icon(
+              //         Icons.arrow_back,
+              //         color: Colors.white,
+              //       ),
+              //       onPressed: () {
+              //         Navigator.push(
+              //             context,
+              //             PageTransition(
+              //                 type: PageTransitionType.fade,
+              //                 child: const Homepage()));
+              //       },
+              //     ),
+              //   ],
+              // ),
               DefaultTabController(
                 length: 4,
                 initialIndex: 1,
@@ -102,8 +106,8 @@ class _PersonalAssistantPageState extends State<PersonalAssistantPage>
                     children: const [
                       TopChoicesPage(),
                       RestaurantList(),
-                      Icon(Icons.directions_bike),
-                      Icon(Icons.directions_bike),
+                      BarsHome(),
+                      ShopList(),
                     ]),
               ),
             ],

@@ -18,7 +18,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
           child: Column(
             children: [
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -35,7 +35,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                             children: [
                               Expanded(
                                 child: Stack(children: [
-                                  ClipRRect(
+                                  const ClipRRect(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(10),
                                         topRight: Radius.circular(10)),
@@ -53,12 +53,12 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                     children: [
                                       Container(
                                         decoration: BoxDecoration(
-                                            color:
-                                                Color.fromRGBO(0, 101, 47, 1),
+                                            color: const Color.fromRGBO(
+                                                0, 101, 47, 1),
                                             borderRadius:
                                                 BorderRadius.circular(10)),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(4.0),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(4.0),
                                           child: Text(
                                             'Restaurant',
                                             style: TextStyle(
@@ -82,14 +82,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  Image(
+                                  const Image(
                                       height: 20,
                                       image: AssetImage(
                                           'assets/restaurants/michelin_star.png')),
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Gaytan',
                                     style: TextStyle(
                                         fontSize: 30,
@@ -98,7 +98,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Modern Cousine',
                                     style: TextStyle(
                                       color: Color.fromRGBO(0, 101, 47, 1),
@@ -107,7 +107,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Príncipe de Vergara 205, Madrid, 28002',
                                     style: TextStyle(
                                         fontSize: 12, color: Colors.black),
@@ -136,7 +136,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                             children: [
                               Expanded(
                                 child: Stack(children: [
-                                  ClipRRect(
+                                  const ClipRRect(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(10),
                                         topRight: Radius.circular(10)),
@@ -154,12 +154,12 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                     children: [
                                       Container(
                                         decoration: BoxDecoration(
-                                            color:
-                                                Color.fromRGBO(0, 101, 47, 1),
+                                            color: const Color.fromRGBO(
+                                                0, 101, 47, 1),
                                             borderRadius:
                                                 BorderRadius.circular(10)),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(4.0),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(4.0),
                                           child: Text(
                                             'Shopping',
                                             style: TextStyle(
@@ -190,7 +190,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Louis Vuitton',
                                     style: TextStyle(
                                         fontSize: 30,
@@ -199,7 +199,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     'The most luxurious shopping',
                                     style: TextStyle(
                                       color: Color.fromRGBO(0, 101, 47, 1),
@@ -208,7 +208,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     'C. de Serrano, 66, 28001 Madrid',
                                     style: TextStyle(
                                         fontSize: 12, color: Colors.black),
@@ -227,11 +227,11 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                 ),
               ),
               const SizedBox(
-                height: 15,
+                height: 40,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Best Reviews',
                     style: TextStyle(
                         color: Colors.white,
@@ -253,7 +253,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image(
+                          child: const Image(
                             image: AssetImage(
                                 'assets/restaurants/best_review1.webp'),
                             width: 150,
@@ -262,14 +262,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           'Elkar',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 150,
                           child: Text(
                             'Modern Cousine, Basque',
@@ -286,7 +286,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image(
+                          child: const Image(
                             image: AssetImage(
                                 'assets/restaurants/best_review2.webp'),
                             width: 150,
@@ -295,14 +295,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           'Iztac',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 150,
                           child: Text(
                             'Mexican',
@@ -321,7 +321,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image(
+                          child: const Image(
                             image: AssetImage(
                                 'assets/restaurants/best_review3.webp'),
                             width: 150,
@@ -330,14 +330,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           'Shinatora Ya',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 150,
                           child: Text(
                             'Japanese',
@@ -353,11 +353,11 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'New',
                     style: TextStyle(
                         color: Colors.white,
@@ -379,7 +379,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image(
+                          child: const Image(
                             image:
                                 AssetImage('assets/restaurants/new_res1.webp'),
                             width: 150,
@@ -388,14 +388,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           'Bichopalo',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 150,
                           child: Text(
                             'Modern Cousine',
@@ -412,7 +412,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image(
+                          child: const Image(
                             image:
                                 AssetImage('assets/restaurants/new_res2.webp'),
                             width: 150,
@@ -421,14 +421,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           'Q78',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 150,
                           child: Text(
                             'Mexican',
@@ -447,7 +447,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image(
+                          child: const Image(
                             image:
                                 AssetImage('assets/restaurants/new_res3.webp'),
                             width: 150,
@@ -456,14 +456,14 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text(
+                        const Text(
                           'Sisapo',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 150,
                           child: Text(
                             'Japanese',
