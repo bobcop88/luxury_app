@@ -32,13 +32,13 @@ class _RestaurantListState extends State<RestaurantList> {
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => RestaurantPage()));
+                                    builder: (context) =>
+                                        const RestaurantPage()));
                               },
                               child: Container(
                                 height: 120,
                                 decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.3),
-                                    border: Border.all(color: Colors.white),
+                                    color: const Color.fromRGBO(39, 80, 66, 1),
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,7 +97,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                   const SizedBox(
                                                     height: 5,
                                                   ),
-                                                  Text(
+                                                  const Text(
                                                     'Príncipe de Vergara 205, Madrid, 28002',
                                                     style: TextStyle(
                                                         fontSize: 12,
@@ -109,10 +109,10 @@ class _RestaurantListState extends State<RestaurantList> {
                                           ),
                                           const Divider(
                                             color: Colors.white,
-                                            indent: 100,
-                                            endIndent: 100,
+                                            indent: 120,
+                                            endIndent: 120,
                                             height: 20,
-                                            thickness: 2,
+                                            thickness: 1,
                                           ),
                                           Row(
                                             mainAxisAlignment:
@@ -120,14 +120,13 @@ class _RestaurantListState extends State<RestaurantList> {
                                             children: [
                                               Container(
                                                 decoration: BoxDecoration(
-                                                  color: Color.fromRGBO(
-                                                      0, 101, 47, 1),
+                                                  color: const Color.fromRGBO(
+                                                      19, 65, 55, 1),
                                                   borderRadius:
                                                       BorderRadius.circular(10),
                                                 ),
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(6.0),
+                                                child: const Padding(
+                                                  padding: EdgeInsets.all(6.0),
                                                   child: Text(
                                                     'Modern Cousine',
                                                     style: TextStyle(
@@ -146,13 +145,12 @@ class _RestaurantListState extends State<RestaurantList> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Container(
                               height: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3),
-                                  border: Border.all(color: Colors.white),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,7 +188,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                               children: [
                                                 Row(
                                                   children: [
-                                                    Text(
+                                                    const Text(
                                                       'DiverXO',
                                                       style: TextStyle(
                                                           color: Colors.white,
@@ -222,7 +220,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   'Padre Damián 23, Madrid, 28036',
                                                   style: TextStyle(
                                                       fontSize: 12,
@@ -234,10 +232,10 @@ class _RestaurantListState extends State<RestaurantList> {
                                         ),
                                         const Divider(
                                           color: Colors.white,
-                                          indent: 100,
-                                          endIndent: 100,
+                                          indent: 120,
+                                          endIndent: 120,
                                           height: 20,
-                                          thickness: 2,
+                                          thickness: 1,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -245,14 +243,13 @@ class _RestaurantListState extends State<RestaurantList> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
+                                                color: const Color.fromRGBO(
+                                                    19, 65, 55, 1),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(6.0),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(6.0),
                                                 child: Text(
                                                   'Creative',
                                                   style: TextStyle(
@@ -270,13 +267,12 @@ class _RestaurantListState extends State<RestaurantList> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Container(
                               height: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3),
-                                  border: Border.all(color: Colors.white),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -296,7 +292,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 image: AssetImage(
                                                     'assets/restaurants/kabuki.webp')),
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -334,7 +330,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   'Avenida Presidente Carmona 2, Madrid, 28020',
                                                   style: TextStyle(
                                                       fontSize: 12,
@@ -346,10 +342,10 @@ class _RestaurantListState extends State<RestaurantList> {
                                         ),
                                         const Divider(
                                           color: Colors.white,
-                                          indent: 100,
-                                          endIndent: 100,
+                                          indent: 120,
+                                          endIndent: 120,
                                           height: 20,
-                                          thickness: 2,
+                                          thickness: 1,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -357,14 +353,13 @@ class _RestaurantListState extends State<RestaurantList> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
+                                                color: const Color.fromRGBO(
+                                                    19, 65, 55, 1),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(6.0),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(6.0),
                                                 child: Text(
                                                   'Japanese',
                                                   style: TextStyle(
@@ -382,13 +377,12 @@ class _RestaurantListState extends State<RestaurantList> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Container(
                               height: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3),
-                                  border: Border.all(color: Colors.white),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -446,7 +440,7 @@ class _RestaurantListState extends State<RestaurantList> {
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   'Del Pinar 15, Madrid, 28006',
                                                   style: TextStyle(
                                                       fontSize: 12,
@@ -458,10 +452,10 @@ class _RestaurantListState extends State<RestaurantList> {
                                         ),
                                         const Divider(
                                           color: Colors.white,
-                                          indent: 100,
-                                          endIndent: 100,
+                                          indent: 120,
+                                          endIndent: 120,
                                           height: 20,
-                                          thickness: 2,
+                                          thickness: 1,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -469,14 +463,13 @@ class _RestaurantListState extends State<RestaurantList> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
+                                                color: const Color.fromRGBO(
+                                                    19, 65, 55, 1),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(6.0),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(6.0),
                                                 child: Text(
                                                   'International',
                                                   style: TextStyle(

@@ -15,10 +15,10 @@ class _FlightPageState extends State<FlightPage> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xff5bb85f), Color(0xff464646)],
-            begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
+          gradient: RadialGradient(
+            colors: [Color(0xff1d453c), Color(0xff292728)],
+            center: Alignment.center,
+            radius: 0.8,
           ),
           image: DecorationImage(
               fit: BoxFit.cover,

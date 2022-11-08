@@ -27,7 +27,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                     Container(
                       width: 300,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color.fromRGBO(39, 80, 66, 1),
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
                         children: [
@@ -48,28 +48,27 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                       alignment: Alignment.center,
                                     ),
                                   ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            color: const Color.fromRGBO(
-                                                0, 101, 47, 1),
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: const Padding(
-                                          padding: EdgeInsets.all(4.0),
-                                          child: Text(
-                                            'Restaurant',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 12),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  // Row(
+                                  //   mainAxisAlignment: MainAxisAlignment.end,
+                                  //   children: [
+                                  //     Container(
+                                  //       decoration: BoxDecoration(
+                                  //           color: const Color.fromRGBO(
+                                  //               39, 80, 66, 1),
+                                  //           borderRadius:
+                                  //               BorderRadius.circular(10)),
+                                  //       child: const Padding(
+                                  //         padding: EdgeInsets.all(6.0),
+                                  //         child: Text(
+                                  //           'Restaurant',
+                                  //           style: TextStyle(
+                                  //               color: Colors.white,
+                                  //               fontSize: 12),
+                                  //         ),
+                                  //       ),
+                                  //     ),
+                                  //   ],
+                                  // ),
                                 ]),
                               ),
                             ],
@@ -92,25 +91,27 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const Text(
                                     'Gaytan',
                                     style: TextStyle(
+                                        color: Colors.white,
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  const Text(
+                                  Text(
                                     'Modern Cousine',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(0, 101, 47, 1),
+                                      color: Colors.grey.shade300,
                                     ),
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  const Text(
+                                  Text(
                                     'Príncipe de Vergara 205, Madrid, 28002',
                                     style: TextStyle(
-                                        fontSize: 12, color: Colors.black),
+                                        fontSize: 12,
+                                        color: Colors.grey.shade400),
                                   ),
                                   const SizedBox(
                                     height: 25,
@@ -128,7 +129,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                     Container(
                       width: 300,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color.fromRGBO(39, 80, 66, 1),
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
                         children: [
@@ -149,28 +150,28 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                       alignment: Alignment.center,
                                     ),
                                   ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            color: const Color.fromRGBO(
-                                                0, 101, 47, 1),
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: const Padding(
-                                          padding: EdgeInsets.all(4.0),
-                                          child: Text(
-                                            'Shopping',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 12),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  // Row(
+                                  //   mainAxisAlignment: MainAxisAlignment.end,
+                                  //   children: [
+                                  //     Container(
+                                  //       decoration: BoxDecoration(
+                                  //           color: const Color.fromRGBO(
+                                  //               0, 101, 47, 1),
+                                  //           borderRadius:
+                                  //               BorderRadius.circular(10)),
+                                  //       child: const Padding(
+                                  //         padding: EdgeInsets.all(4.0),
+                                  //         child: Text(
+                                  //           'Shopping',
+                                  //           style: TextStyle(
+                                  //               color: Colors.white,
+                                  //               fontWeight: FontWeight.bold,
+                                  //               fontSize: 12),
+                                  //         ),
+                                  //       ),
+                                  //     ),
+                                  //   ],
+                                  // ),
                                 ]),
                               ),
                             ],
@@ -193,25 +194,27 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                   const Text(
                                     'Louis Vuitton',
                                     style: TextStyle(
+                                        color: Colors.white,
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  const Text(
+                                  Text(
                                     'The most luxurious shopping',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(0, 101, 47, 1),
+                                      color: Colors.grey.shade300,
                                     ),
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  const Text(
+                                  Text(
                                     'C. de Serrano, 66, 28001 Madrid',
                                     style: TextStyle(
-                                        fontSize: 12, color: Colors.black),
+                                        fontSize: 12,
+                                        color: Colors.grey.shade400),
                                   ),
                                   const SizedBox(
                                     height: 25,
@@ -358,7 +361,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
               Row(
                 children: [
                   const Text(
-                    'New',
+                    'Trendy',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -367,9 +370,12 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                 ],
               ),
               const Divider(
-                endIndent: 300,
+                endIndent: 350,
                 thickness: 2,
                 color: Colors.white,
+              ),
+              const SizedBox(
+                height: 10,
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,

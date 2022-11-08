@@ -23,10 +23,10 @@ class _HotelPageState extends State<HotelPage> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xff5bb85f), Color(0xff464646)],
-            begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
+          gradient: RadialGradient(
+            colors: [Color(0xff1d453c), Color(0xff292728)],
+            center: Alignment.center,
+            radius: 0.8,
           ),
           image: DecorationImage(
               fit: BoxFit.cover,
@@ -118,7 +118,7 @@ class _HotelPageState extends State<HotelPage> {
                       child: CarouselSlider(
                           items: imageHotel,
                           options: CarouselOptions(
-                            height: 200,
+                            height: 150,
                             viewportFraction: 0.8,
                             initialPage: 0,
                             enableInfiniteScroll: true,
@@ -137,6 +137,56 @@ class _HotelPageState extends State<HotelPage> {
               ),
               const SizedBox(
                 height: 10,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Check-in Time',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          '20:00',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: const [
+                        Text(
+                          'Date',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          '2nd Feb 2022',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
               ),
               Padding(
                 padding:
@@ -186,8 +236,20 @@ class _HotelPageState extends State<HotelPage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Image(
+              //       image: AssetImage('assets/hotel_slider/qr_correct.png'),
+              //       height: 100,
+              //     )
+              //   ],
+              // ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
@@ -199,7 +261,7 @@ class _HotelPageState extends State<HotelPage> {
                       child: Text('Online Check In'),
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                              Color.fromRGBO(0, 101, 47, 1))),
+                              Color.fromRGBO(39, 80, 66, 1))),
                     ),
                   ],
                 ),

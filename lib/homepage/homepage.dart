@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher_icons/xml_templates.dart';
 import 'package:luxury_app/agenda/agenda_home.dart';
 import 'package:luxury_app/flight/flight_page.dart';
 import 'package:luxury_app/hotel_page/hotel_page.dart';
@@ -19,7 +18,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: RadialGradient(
         colors: [Color(0xff1d453c), Color(0xff292728)],
         center: Alignment.center,
@@ -29,386 +28,317 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade900,
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(120),
-                  )),
-              child: SafeArea(
-                child: Column(
-                  children: [
-                    Row(
+            SafeArea(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(41, 39, 39, 0.52),
+                        borderRadius: BorderRadius.circular(150)),
+                    child: Column(
                       children: [
-                        Expanded(
-                          child: Image(
-                            width: MediaQuery.of(context).size.width,
-                            image:
-                                const AssetImage('assets/EMERALD_correct.gif'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: const Color.fromRGBO(33, 33, 33, 1),
-                              boxShadow: [
-                                const BoxShadow(
-                                    color: Colors.black,
-                                    offset: Offset(1, 1),
-                                    blurRadius: 2,
-                                    spreadRadius: 1),
-                                BoxShadow(
-                                    color: Colors.grey.shade800,
-                                    offset: const Offset(-1, -1),
-                                    blurRadius: 2,
-                                    spreadRadius: 1),
-                              ]),
-                          child: const Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: Icon(
-                              Icons.person,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
                         const SizedBox(
-                          width: 10,
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Image(
+                                width: MediaQuery.of(context).size.width,
+                                image: const AssetImage(
+                                    'assets/home_logo_new.png'),
+                              ),
+                            ),
+                          ],
                         ),
                         const Text(
                           'Welcome Mr. Smith',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold),
+                            color: Colors.white,
+                            fontSize: 30,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 60.0),
+                          child: Text(
+                            'To Your Tailor Made Experience',
+                            style: TextStyle(
+                              color: Color.fromRGBO(106, 160, 142, 1),
+                              fontSize: 16,
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 50,
-                    )
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             Expanded(
-              child: Stack(children: [
-                Container(
-                  decoration: BoxDecoration(color: Colors.grey.shade900),
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                      color: Color.fromRGBO(51, 201, 159, 1),
-                      borderRadius:
-                          BorderRadius.only(topRight: Radius.circular(120))),
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
                           children: [
-                            Column(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        PageTransition(
-                                            type: PageTransitionType.fade,
-                                            child: const FlightPage()));
-                                  },
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(40),
-                                        color: const Color.fromRGBO(
-                                            51, 201, 159, 1),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                              color: Color.fromARGB(
-                                                  255, 37, 148, 116),
-                                              offset: Offset(1, 1),
-                                              blurRadius: 2,
-                                              spreadRadius: 1),
-                                          BoxShadow(
-                                              color: Color.fromARGB(
-                                                  255, 59, 233, 184),
-                                              offset: Offset(-1, -1),
-                                              blurRadius: 2,
-                                              spreadRadius: 1),
-                                        ]),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Image(
-                                        image: AssetImage(
-                                            'assets/trip/plane_icon.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                const Text(
-                                  'Flight',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Column(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        PageTransition(
-                                            type: PageTransitionType.fade,
-                                            child: const TransferPage()));
-                                  },
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(40),
-                                        color: const Color.fromRGBO(
-                                            51, 201, 159, 1),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                              color: Color.fromARGB(
-                                                  255, 37, 148, 116),
-                                              offset: Offset(1, 1),
-                                              blurRadius: 2,
-                                              spreadRadius: 1),
-                                          BoxShadow(
-                                              color: Color.fromARGB(
-                                                  255, 59, 233, 184),
-                                              offset: Offset(-1, -1),
-                                              blurRadius: 2,
-                                              spreadRadius: 1),
-                                        ]),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Image(
-                                        image: AssetImage(
-                                            'assets/trip/texi_icon.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                const Text(
-                                  'Transfer',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Column(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        PageTransition(
-                                            type: PageTransitionType.fade,
-                                            child: const HotelPage()));
-                                  },
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(40),
-                                        color: const Color.fromRGBO(
-                                            51, 201, 159, 1),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                              color: Color.fromARGB(
-                                                  255, 37, 148, 116),
-                                              offset: Offset(1, 1),
-                                              blurRadius: 2,
-                                              spreadRadius: 1),
-                                          BoxShadow(
-                                              color: Color.fromARGB(
-                                                  255, 59, 233, 184),
-                                              offset: Offset(-1, -1),
-                                              blurRadius: 2,
-                                              spreadRadius: 1),
-                                        ]),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(20.0),
-                                      child: Image(
-                                        image: AssetImage(
-                                            'assets/trip/hotel_icon.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                const Text(
-                                  'Hotel',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 15,
+                            Text(
+                              'Services',
+                              style: TextStyle(
+                                  color: Colors.grey.shade200, fontSize: 24),
                             ),
                           ],
                         ),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              type: PageTransitionType.fade,
-                                              child:
-                                                  const PersonalAssistantPage()));
-                                    },
-                                    child: Container(
-                                      width: 200,
-                                      height: 150,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(40),
-                                          color: const Color.fromRGBO(
-                                              51, 201, 159, 1),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                                color: Color.fromARGB(
-                                                    255, 37, 148, 116),
-                                                offset: Offset(1, 1),
-                                                blurRadius: 2,
-                                                spreadRadius: 1),
-                                            BoxShadow(
-                                                color: Color.fromARGB(
-                                                    255, 59, 233, 184),
-                                                offset: Offset(-1, -1),
-                                                blurRadius: 2,
-                                                spreadRadius: 1),
-                                          ]),
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(20.0),
-                                        child: Image(
-                                          image: AssetImage(
-                                              'assets/assistant_icon.png'),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Text(
-                                    'Personal Assistant',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              type: PageTransitionType.fade,
-                                              child: const AgendaHome()));
-                                    },
-                                    child: Container(
-                                      width: 200,
-                                      height: 150,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(40),
-                                          color: const Color.fromRGBO(
-                                              51, 201, 159, 1),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                                color: Color.fromARGB(
-                                                    255, 37, 148, 116),
-                                                offset: Offset(1, 1),
-                                                blurRadius: 2,
-                                                spreadRadius: 1),
-                                            BoxShadow(
-                                                color: Color.fromARGB(
-                                                    255, 59, 233, 184),
-                                                offset: Offset(-1, -1),
-                                                blurRadius: 2,
-                                                spreadRadius: 1),
-                                          ]),
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(20.0),
-                                        child: Image(
-                                          image: AssetImage(
-                                              'assets/calendar_icon.png'),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Text(
-                                    'Agenda',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ]),
+                  Divider(
+                    color: Colors.grey.shade200,
+                    indent: 200,
+                    endIndent: 200,
+                    thickness: 2,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        type: PageTransitionType.fade,
+                                        child: const FlightPage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: Image(
+                                    image: AssetImage(
+                                        'assets/icons_home/plane_icon2.png'),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Flight',
+                              style: TextStyle(
+                                color: Colors.grey.shade200,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        type: PageTransitionType.fade,
+                                        child: const TransferPage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: Image(
+                                    image: AssetImage(
+                                        'assets/icons_home/transfer_icon.png'),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Transfer',
+                              style: TextStyle(
+                                color: Colors.grey.shade200,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        type: PageTransitionType.fade,
+                                        child: const HotelPage()));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: Image(
+                                    image: AssetImage(
+                                        'assets/icons_home/hotel_icon1.png'),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Hotel',
+                              style: TextStyle(
+                                color: Colors.grey.shade200,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          type: PageTransitionType.fade,
+                                          child:
+                                              const PersonalAssistantPage()));
+                                },
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        height: 120,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: const Color.fromRGBO(
+                                              39, 80, 66, 1),
+                                        ),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Image(
+                                            image: AssetImage(
+                                                'assets/icons_home/assistant_icon1.png'),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      'Your Madrid',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.grey.shade200,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          type: PageTransitionType.fade,
+                                          child: const AgendaHome()));
+                                },
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        height: 120,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: const Color.fromRGBO(
+                                              39, 80, 66, 1),
+                                        ),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(20.0),
+                                          child: Image(
+                                            image: AssetImage(
+                                                'assets/icons_home/calendar_icon1.png'),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'Agenda',
+                                style: TextStyle(
+                                  color: Colors.grey.shade200,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

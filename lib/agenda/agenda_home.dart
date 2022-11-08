@@ -32,10 +32,10 @@ class _AgendaHomeState extends State<AgendaHome>
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xff5bb85f), Color(0xff464646)],
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
+        gradient: RadialGradient(
+          colors: [Color(0xff1d453c), Color(0xff292728)],
+          center: Alignment.center,
+          radius: 0.8,
         ),
         image: const DecorationImage(
             fit: BoxFit.cover,
@@ -68,6 +68,7 @@ class _AgendaHomeState extends State<AgendaHome>
                 height: 15,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -77,14 +78,14 @@ class _AgendaHomeState extends State<AgendaHome>
                         Text(
                           '2 February',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 18,
                             color: Colors.white,
                           ),
                         ),
                         Text(
                           'Today',
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 30,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
@@ -103,7 +104,7 @@ class _AgendaHomeState extends State<AgendaHome>
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: TabBar(
                         labelPadding:
-                            const EdgeInsets.symmetric(horizontal: 25),
+                            const EdgeInsets.symmetric(horizontal: 35),
                         indicatorPadding:
                             const EdgeInsets.symmetric(horizontal: 25),
                         // indicatorSize: TabBarIndicatorSize(),

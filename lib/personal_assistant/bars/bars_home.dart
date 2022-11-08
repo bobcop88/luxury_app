@@ -34,8 +34,7 @@ class _BarsHomeState extends State<BarsHome> {
                               child: Container(
                                 height: 120,
                                 decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.3),
-                                    border: Border.all(color: Colors.white),
+                                    color: const Color.fromRGBO(39, 80, 66, 1),
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,17 +42,25 @@ class _BarsHomeState extends State<BarsHome> {
                                     Expanded(
                                       flex: 1,
                                       child: Column(
-                                        children: const [
+                                        children: [
                                           Expanded(
                                             child: ClipRRect(
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(10),
-                                                  bottomLeft:
-                                                      Radius.circular(10)),
-                                              child: Image(
-                                                  fit: BoxFit.cover,
-                                                  image: AssetImage(
-                                                      'assets/bars/bar1.jpeg')),
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(10),
+                                                      bottomLeft:
+                                                          Radius.circular(10)),
+                                              child: Row(
+                                                children: const [
+                                                  Expanded(
+                                                    child: Image(
+                                                        fit: BoxFit.cover,
+                                                        image: AssetImage(
+                                                            'assets/bars/bar1.jpeg')),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           )
                                         ],
@@ -87,7 +94,7 @@ class _BarsHomeState extends State<BarsHome> {
                                                   const SizedBox(
                                                     height: 5,
                                                   ),
-                                                  Text(
+                                                  const Text(
                                                     'C de Miguel Moya 8, 28004 Madrid',
                                                     style: TextStyle(
                                                         fontSize: 12,
@@ -99,10 +106,10 @@ class _BarsHomeState extends State<BarsHome> {
                                           ),
                                           const Divider(
                                             color: Colors.white,
-                                            indent: 100,
-                                            endIndent: 100,
+                                            indent: 120,
+                                            endIndent: 120,
                                             height: 20,
-                                            thickness: 2,
+                                            thickness: 1,
                                           ),
                                           Row(
                                             mainAxisAlignment:
@@ -110,14 +117,13 @@ class _BarsHomeState extends State<BarsHome> {
                                             children: [
                                               Container(
                                                 decoration: BoxDecoration(
-                                                  color: Color.fromRGBO(
-                                                      0, 101, 47, 1),
+                                                  color: const Color.fromRGBO(
+                                                      19, 65, 55, 1),
                                                   borderRadius:
                                                       BorderRadius.circular(10),
                                                 ),
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(6.0),
+                                                child: const Padding(
+                                                  padding: EdgeInsets.all(6.0),
                                                   child: Text(
                                                     'Cocktails',
                                                     style: TextStyle(
@@ -136,13 +142,12 @@ class _BarsHomeState extends State<BarsHome> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Container(
                               height: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3),
-                                  border: Border.all(color: Colors.white),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,17 +155,25 @@ class _BarsHomeState extends State<BarsHome> {
                                   Expanded(
                                     flex: 1,
                                     child: Column(
-                                      children: const [
-                                        Expanded(
+                                      children: [
+                                        Flexible(
                                           child: ClipRRect(
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(10),
-                                                bottomLeft:
-                                                    Radius.circular(10)),
-                                            child: Image(
-                                                fit: BoxFit.cover,
-                                                image: AssetImage(
-                                                    'assets/bars/bar2.jpeg')),
+                                            borderRadius:
+                                                const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(10),
+                                                    bottomLeft:
+                                                        Radius.circular(10)),
+                                            child: Row(
+                                              children: const [
+                                                Expanded(
+                                                  child: Image(
+                                                      fit: BoxFit.cover,
+                                                      image: AssetImage(
+                                                          'assets/bars/bar2.jpeg')),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         )
                                       ],
@@ -179,7 +192,7 @@ class _BarsHomeState extends State<BarsHome> {
                                             Column(
                                               children: [
                                                 Row(
-                                                  children: [
+                                                  children: const [
                                                     Text(
                                                       'La Santoria',
                                                       style: TextStyle(
@@ -193,7 +206,7 @@ class _BarsHomeState extends State<BarsHome> {
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   'C. de Lope de Vega, 30, 28014 Madrid',
                                                   style: TextStyle(
                                                       fontSize: 12,
@@ -205,10 +218,10 @@ class _BarsHomeState extends State<BarsHome> {
                                         ),
                                         const Divider(
                                           color: Colors.white,
-                                          indent: 100,
-                                          endIndent: 100,
+                                          indent: 120,
+                                          endIndent: 120,
                                           height: 20,
-                                          thickness: 2,
+                                          thickness: 1,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -216,14 +229,13 @@ class _BarsHomeState extends State<BarsHome> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
+                                                color: const Color.fromRGBO(
+                                                    19, 65, 55, 1),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(6.0),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(6.0),
                                                 child: Text(
                                                   'Creative Cocktails',
                                                   style: TextStyle(
@@ -241,13 +253,12 @@ class _BarsHomeState extends State<BarsHome> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Container(
                               height: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3),
-                                  border: Border.all(color: Colors.white),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -255,17 +266,25 @@ class _BarsHomeState extends State<BarsHome> {
                                   Expanded(
                                     flex: 1,
                                     child: Column(
-                                      children: const [
+                                      children: [
                                         Expanded(
                                           child: ClipRRect(
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(10),
-                                                bottomLeft:
-                                                    Radius.circular(10)),
-                                            child: Image(
-                                                fit: BoxFit.cover,
-                                                image: AssetImage(
-                                                    'assets/bars/bar3.jpeg')),
+                                            borderRadius:
+                                                const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(10),
+                                                    bottomLeft:
+                                                        Radius.circular(10)),
+                                            child: Row(
+                                              children: const [
+                                                Expanded(
+                                                  child: Image(
+                                                      fit: BoxFit.cover,
+                                                      image: AssetImage(
+                                                          'assets/bars/bar3.jpeg')),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         )
                                       ],
@@ -298,7 +317,7 @@ class _BarsHomeState extends State<BarsHome> {
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   'Calle de Echegaray, 21, 28014 Madrid',
                                                   style: TextStyle(
                                                       fontSize: 12,
@@ -310,10 +329,10 @@ class _BarsHomeState extends State<BarsHome> {
                                         ),
                                         const Divider(
                                           color: Colors.white,
-                                          indent: 100,
-                                          endIndent: 100,
+                                          indent: 120,
+                                          endIndent: 120,
                                           height: 20,
-                                          thickness: 2,
+                                          thickness: 1,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -321,14 +340,13 @@ class _BarsHomeState extends State<BarsHome> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
+                                                color: const Color.fromRGBO(
+                                                    19, 65, 55, 1),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(6.0),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(6.0),
                                                 child: Text(
                                                   'Funky Cocktails',
                                                   style: TextStyle(
@@ -346,13 +364,12 @@ class _BarsHomeState extends State<BarsHome> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             Container(
                               height: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.3),
-                                  border: Border.all(color: Colors.white),
+                                  color: const Color.fromRGBO(39, 80, 66, 1),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -360,17 +377,25 @@ class _BarsHomeState extends State<BarsHome> {
                                   Expanded(
                                     flex: 1,
                                     child: Column(
-                                      children: const [
+                                      children: [
                                         Expanded(
                                           child: ClipRRect(
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(10),
-                                                bottomLeft:
-                                                    Radius.circular(10)),
-                                            child: Image(
-                                                fit: BoxFit.cover,
-                                                image: AssetImage(
-                                                    'assets/bars/bar4.jpeg')),
+                                            borderRadius:
+                                                const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(10),
+                                                    bottomLeft:
+                                                        Radius.circular(10)),
+                                            child: Row(
+                                              children: const [
+                                                Expanded(
+                                                  child: Image(
+                                                      fit: BoxFit.cover,
+                                                      image: AssetImage(
+                                                          'assets/bars/bar4.jpeg')),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         )
                                       ],
@@ -403,7 +428,7 @@ class _BarsHomeState extends State<BarsHome> {
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                Text(
+                                                const Text(
                                                   'C. de Santo Tomé, 8, 28004 Madrid',
                                                   style: TextStyle(
                                                       fontSize: 12,
@@ -415,10 +440,10 @@ class _BarsHomeState extends State<BarsHome> {
                                         ),
                                         const Divider(
                                           color: Colors.white,
-                                          indent: 100,
-                                          endIndent: 100,
+                                          indent: 120,
+                                          endIndent: 120,
                                           height: 20,
-                                          thickness: 2,
+                                          thickness: 1,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -426,14 +451,13 @@ class _BarsHomeState extends State<BarsHome> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: Color.fromRGBO(
-                                                    0, 101, 47, 1),
+                                                color: const Color.fromRGBO(
+                                                    19, 65, 55, 1),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(6.0),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(6.0),
                                                 child: Text(
                                                   'International Cocktails',
                                                   style: TextStyle(

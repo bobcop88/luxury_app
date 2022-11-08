@@ -25,7 +25,7 @@ class _DayOneState extends State<DayOne> {
               Expanded(
                 child: Timeline(
                     theme: TimelineTheme.of(context).copyWith(
-                        color: Colors.grey.shade800, nodePosition: 0.2),
+                        color: Colors.grey.shade600, nodePosition: 0.2),
                     padding: const EdgeInsets.only(bottom: 100, right: 10),
                     children: [
                       TimelineTile(
@@ -63,12 +63,12 @@ class _DayOneState extends State<DayOne> {
                                         const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: const Color.fromRGBO(
-                                              51, 201, 159, 0.7),
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          border:
-                                              Border.all(color: Colors.white)),
+                                        color:
+                                            const Color.fromRGBO(39, 80, 66, 1),
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(
+                                            color: Colors.grey.shade600),
+                                      ),
                                       height: 150,
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
@@ -133,8 +133,8 @@ class _DayOneState extends State<DayOne> {
                         ),
                         node: TimelineNode(
                           indicator: DotIndicator(
-                            border: Border.all(color: Colors.white),
-                            color: Color.fromRGBO(51, 201, 159, 0.7),
+                            border: Border.all(color: Colors.grey.shade600),
+                            color: Color.fromRGBO(39, 80, 66, 1),
                           ),
                           endConnector: SolidLineConnector(),
                           startConnector: SolidLineConnector(),
@@ -179,8 +179,8 @@ class _DayOneState extends State<DayOne> {
                                           color: Colors.black.withOpacity(0.2),
                                           borderRadius:
                                               BorderRadius.circular(15),
-                                          border:
-                                              Border.all(color: Colors.white)),
+                                          border: Border.all(
+                                              color: Colors.grey.shade600)),
                                       height: 150,
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
