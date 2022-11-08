@@ -27,15 +27,15 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                     Container(
                       width: 300,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(39, 80, 66, 1),
+                          color: const Color.fromRGBO(39, 80, 66, 1),
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
                         children: [
                           Row(
                             children: [
                               Expanded(
-                                child: Stack(children: [
-                                  const ClipRRect(
+                                child: Stack(children: const [
+                                  ClipRRect(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(10),
                                         topRight: Radius.circular(10)),
@@ -48,27 +48,6 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                                       alignment: Alignment.center,
                                     ),
                                   ),
-                                  // Row(
-                                  //   mainAxisAlignment: MainAxisAlignment.end,
-                                  //   children: [
-                                  //     Container(
-                                  //       decoration: BoxDecoration(
-                                  //           color: const Color.fromRGBO(
-                                  //               39, 80, 66, 1),
-                                  //           borderRadius:
-                                  //               BorderRadius.circular(10)),
-                                  //       child: const Padding(
-                                  //         padding: EdgeInsets.all(6.0),
-                                  //         child: Text(
-                                  //           'Restaurant',
-                                  //           style: TextStyle(
-                                  //               color: Colors.white,
-                                  //               fontSize: 12),
-                                  //         ),
-                                  //       ),
-                                  //     ),
-                                  //   ],
-                                  // ),
                                 ]),
                               ),
                             ],
@@ -129,15 +108,15 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                     Container(
                       width: 300,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(39, 80, 66, 1),
+                          color: const Color.fromRGBO(39, 80, 66, 1),
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
                         children: [
                           Row(
                             children: [
                               Expanded(
-                                child: Stack(children: [
-                                  const ClipRRect(
+                                child: Stack(children: const [
+                                  ClipRRect(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(10),
                                         topRight: Radius.circular(10)),
@@ -233,8 +212,8 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                 height: 40,
               ),
               Row(
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'Best Reviews',
                     style: TextStyle(
                         color: Colors.white,
@@ -245,8 +224,11 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
               ),
               const Divider(
                 endIndent: 300,
-                thickness: 2,
+                thickness: 1,
                 color: Colors.white,
+              ),
+              const SizedBox(
+                height: 10,
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -359,8 +341,8 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
                 height: 40,
               ),
               Row(
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'Trendy',
                     style: TextStyle(
                         color: Colors.white,
@@ -371,7 +353,7 @@ class _TopChoicesPageState extends State<TopChoicesPage> {
               ),
               const Divider(
                 endIndent: 350,
-                thickness: 2,
+                thickness: 1,
                 color: Colors.white,
               ),
               const SizedBox(

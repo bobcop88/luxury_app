@@ -31,13 +31,13 @@ class _AgendaHomeState extends State<AgendaHome>
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: RadialGradient(
           colors: [Color(0xff1d453c), Color(0xff292728)],
           center: Alignment.center,
           radius: 0.8,
         ),
-        image: const DecorationImage(
+        image: DecorationImage(
             fit: BoxFit.cover,
             opacity: 0.05,
             image: AssetImage('assets/agenda_background.png')),
@@ -184,153 +184,6 @@ class _AgendaHomeState extends State<AgendaHome>
                     controller: agendaTabController,
                     children: const [DayOne(), DayTwo(), DayThree()]),
               ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     GestureDetector(
-              //       onTap: () {
-              //         setState(() {
-              //           pageController.jumpToPage(0);
-              //           selectedPage = 0;
-              //         });
-              //       },
-              //       child: Container(
-              //         decoration: BoxDecoration(
-              //           border: selectedPage == 0
-              //               ? Border(
-              //                   bottom: BorderSide(
-              //                       color: Color.fromRGBO(125, 196, 174, 1)))
-              //               : Border(bottom: BorderSide.none),
-              //         ),
-              //         child: Padding(
-              //           padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              //           child: Column(
-              //             children: const [
-              //               Text(
-              //                 'Fri',
-              //                 style:
-              //                     TextStyle(fontSize: 16, color: Colors.white),
-              //               ),
-              //               Text(
-              //                 '2',
-              //                 style: TextStyle(
-              //                     fontSize: 24,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     const SizedBox(
-              //       width: 15,
-              //     ),
-              //     GestureDetector(
-              //       onTap: () {
-              //         setState(() {
-              //           pageController.jumpToPage(1);
-              //           selectedPage = 1;
-              //         });
-              //       },
-              //       child: Container(
-              //         decoration: BoxDecoration(
-              //           border: selectedPage == 1
-              //               ? Border(
-              //                   bottom: BorderSide(
-              //                       color: Color.fromRGBO(125, 196, 174, 1)))
-              //               : Border(bottom: BorderSide.none),
-              //         ),
-              //         child: Padding(
-              //           padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              //           child: Column(
-              //             children: const [
-              //               Text(
-              //                 'Sat',
-              //                 style:
-              //                     TextStyle(fontSize: 16, color: Colors.white),
-              //               ),
-              //               Text(
-              //                 '3',
-              //                 style: TextStyle(
-              //                     fontSize: 24,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     const SizedBox(
-              //       width: 15,
-              //     ),
-              //     GestureDetector(
-              //       onTap: () {
-              //         setState(() {
-              //           pageController.jumpToPage(2);
-              //           selectedPage = 2;
-              //         });
-              //       },
-              //       child: Container(
-              //         decoration: BoxDecoration(
-              //           color: selectedPage == 2 ? Colors.green : Colors.white,
-              //           borderRadius: BorderRadius.circular(10),
-              //         ),
-              //         child: Padding(
-              //           padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              //           child: Column(
-              //             children: const [
-              //               Text(
-              //                 'FEB',
-              //                 style: TextStyle(fontSize: 9),
-              //               ),
-              //               Text(
-              //                 '4',
-              //                 style: TextStyle(
-              //                     fontSize: 20, fontWeight: FontWeight.bold),
-              //               ),
-              //               Text(
-              //                 'SUN',
-              //                 style: TextStyle(fontSize: 9),
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-              // Expanded(
-              //   child: Row(
-              //     children: [
-              //       Expanded(
-              //         child: PageView(
-              //           controller: pageController,
-              //           children: [
-              //             Container(
-              //               decoration: BoxDecoration(color: Colors.white),
-              //               child: DayOne(),
-              //             ),
-              //             Container(
-              //               decoration: BoxDecoration(color: Colors.blue),
-              //               child: DayTwo(),
-              //             ),
-              //             Container(
-              //               decoration:
-              //                   BoxDecoration(color: Colors.red.shade200),
-              //               child: DayThree(),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ],
           ),
         ),

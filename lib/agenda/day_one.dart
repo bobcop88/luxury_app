@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:luxury_app/agenda/event_page.dart';
+import 'package:page_transition/page_transition.dart';
 import 'dart:math' as math;
 
 import 'package:timelines/timelines.dart';
@@ -61,65 +63,76 @@ class _DayOneState extends State<DayOne> {
                                   child: Padding(
                                     padding:
                                         const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color:
-                                            const Color.fromRGBO(39, 80, 66, 1),
-                                        borderRadius: BorderRadius.circular(15),
-                                        border: Border.all(
-                                            color: Colors.grey.shade600),
-                                      ),
-                                      height: 150,
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          const SizedBox(
-                                            height: 8,
-                                          ),
-                                          Row(
-                                            children: const [
-                                              Text(
-                                                'Modern Lunch',
-                                                style: TextStyle(
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            PageTransition(
+                                                type: PageTransitionType.fade,
+                                                child: const EventPage()));
+                                      },
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: const Color.fromRGBO(
+                                              39, 80, 66, 1),
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          border: Border.all(
+                                              color: Colors.grey.shade600),
+                                        ),
+                                        height: 150,
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Column(
+                                          children: [
+                                            const SizedBox(
+                                              height: 8,
+                                            ),
+                                            Row(
+                                              children: const [
+                                                Text(
+                                                  'Modern Lunch',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              ],
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Row(
+                                              children: const [
+                                                Text(
+                                                  'Madrid Expo Pavillon 6',
+                                                  style: TextStyle(
                                                     color: Colors.white,
-                                                    fontSize: 18,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Row(
-                                            children: const [
-                                              Text(
-                                                'Madrid Expo Pavillon 6',
-                                                style: TextStyle(
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            const SizedBox(
+                                              height: 30,
+                                            ),
+                                            Row(
+                                              children: const [
+                                                Icon(
+                                                  Icons
+                                                      .restaurant_menu_outlined,
                                                   color: Colors.white,
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            height: 30,
-                                          ),
-                                          Row(
-                                            children: const [
-                                              Icon(
-                                                Icons.restaurant_menu_outlined,
-                                                color: Colors.white,
-                                              ),
-                                              SizedBox(
-                                                width: 5,
-                                              ),
-                                              Icon(
-                                                FontAwesome5.instagram,
-                                                color: Colors.white,
-                                              )
-                                            ],
-                                          ),
-                                        ],
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Icon(
+                                                  FontAwesome5.instagram,
+                                                  color: Colors.white,
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -285,11 +298,11 @@ class _DayOneState extends State<DayOne> {
                                         const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.2),
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          border:
-                                              Border.all(color: Colors.white)),
+                                        color: Colors.black.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(
+                                            color: Colors.grey.shade600),
+                                      ),
                                       height: 150,
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(

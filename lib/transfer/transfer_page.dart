@@ -47,7 +47,7 @@ class _TransferPageState extends State<TransferPage> {
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               Padding(
                 padding:
@@ -68,7 +68,7 @@ class _TransferPageState extends State<TransferPage> {
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 50,
               ),
               Padding(
                 padding:
@@ -126,7 +126,7 @@ class _TransferPageState extends State<TransferPage> {
                       ],
                     ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: const [
                         Text(
                           'Plate',
@@ -148,7 +148,7 @@ class _TransferPageState extends State<TransferPage> {
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 60,
               ),
               Padding(
                 padding:
@@ -182,7 +182,7 @@ class _TransferPageState extends State<TransferPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'EMERALD AIRPORT GROUP',
+                            'EMERALD TRANSFER GROUP',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,

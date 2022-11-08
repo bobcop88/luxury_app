@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:luxury_app/personal_assistant/restaurants/restaurant_page.dart';
+import 'package:page_transition/page_transition.dart';
 
 class RestaurantList extends StatefulWidget {
   const RestaurantList({Key? key}) : super(key: key);
@@ -31,9 +32,11 @@ class _RestaurantListState extends State<RestaurantList> {
                           children: [
                             GestureDetector(
                               onTap: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RestaurantPage()));
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        type: PageTransitionType.fade,
+                                        child: const RestaurantPage()));
                               },
                               child: Container(
                                 height: 120,

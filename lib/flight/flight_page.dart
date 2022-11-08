@@ -57,7 +57,7 @@ class _FlightPageState extends State<FlightPage> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'RUH',
                           style: TextStyle(
@@ -70,7 +70,8 @@ class _FlightPageState extends State<FlightPage> {
                         ),
                         Text(
                           'Riyadh',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
+                          style: TextStyle(
+                              fontSize: 18, color: Colors.grey.shade200),
                         ),
                         SizedBox(
                           height: 10,
@@ -89,7 +90,7 @@ class _FlightPageState extends State<FlightPage> {
                           '20:00 ',
                           style: TextStyle(
                             fontSize: 13,
-                            color: Colors.white,
+                            color: Colors.grey.shade400,
                           ),
                         ),
                       ],
@@ -105,7 +106,7 @@ class _FlightPageState extends State<FlightPage> {
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
-                      children: const [
+                      children: [
                         Text(
                           'MAD',
                           style: TextStyle(
@@ -118,7 +119,8 @@ class _FlightPageState extends State<FlightPage> {
                         ),
                         Text(
                           'Madrid',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
+                          style: TextStyle(
+                              fontSize: 18, color: Colors.grey.shade200),
                         ),
                         SizedBox(
                           height: 10,
@@ -137,7 +139,7 @@ class _FlightPageState extends State<FlightPage> {
                           '23:00 ',
                           style: TextStyle(
                             fontSize: 13,
-                            color: Colors.white,
+                            color: Colors.grey.shade400,
                           ),
                         ),
                       ],
@@ -146,7 +148,7 @@ class _FlightPageState extends State<FlightPage> {
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 50,
               ),
               Padding(
                 padding:
@@ -176,7 +178,7 @@ class _FlightPageState extends State<FlightPage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               Padding(
                 padding:
@@ -226,7 +228,7 @@ class _FlightPageState extends State<FlightPage> {
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 60,
               ),
               Padding(
                 padding:

@@ -23,7 +23,7 @@ class _DayThreeState extends State<DayThree> {
               Expanded(
                 child: Timeline(
                     theme: TimelineTheme.of(context).copyWith(
-                        color: Colors.grey.shade800, nodePosition: 0.2),
+                        color: Colors.grey.shade600, nodePosition: 0.2),
                     padding: const EdgeInsets.only(bottom: 100, right: 10),
                     children: [
                       TimelineTile(
@@ -61,11 +61,11 @@ class _DayThreeState extends State<DayThree> {
                                         const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.2),
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          border:
-                                              Border.all(color: Colors.white)),
+                                        color: Colors.black.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(
+                                            color: Colors.grey.shade600),
+                                      ),
                                       height: 150,
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
@@ -170,11 +170,11 @@ class _DayThreeState extends State<DayThree> {
                                         const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.2),
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          border:
-                                              Border.all(color: Colors.white)),
+                                        color: Colors.black.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(
+                                            color: Colors.grey.shade600),
+                                      ),
                                       height: 150,
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
@@ -279,11 +279,11 @@ class _DayThreeState extends State<DayThree> {
                                         const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.2),
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                          border:
-                                              Border.all(color: Colors.white)),
+                                        color: Colors.black.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(
+                                            color: Colors.grey.shade600),
+                                      ),
                                       height: 150,
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(

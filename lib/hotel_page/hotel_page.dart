@@ -55,7 +55,7 @@ class _HotelPageState extends State<HotelPage> {
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               Padding(
                   padding:
@@ -109,6 +109,9 @@ class _HotelPageState extends State<HotelPage> {
                           ],
                         ),
                       ])),
+              const SizedBox(
+                height: 20,
+              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
@@ -136,7 +139,7 @@ class _HotelPageState extends State<HotelPage> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               Padding(
                 padding:
